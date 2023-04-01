@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- includ bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- includ fontawsoom -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- includ css project file -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- includ animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- google fonts -->
+    <!-- //////////// -->
+    <title>BootStrap-template</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sound_component">
+            <div class="sound_state" id="sound_state">
+                <i class="fa-solid fa-volume-high state_icon_high" id="state_icon_high"></i>
+                <!-- <i class="fa-solid fa-volume-low state_icon_low" id="state_icon_low"></i> -->
+                <!-- <i class="fa-solid fa-volume-xmark state_icon_xmark" id="state_icon_xmark"></i> -->
+            </div>
+            <div class="control-sound">
+                <div class="input-container">
+                    <input type="range" name="" id="range_sound">
+                    <div id="sound_size"></div>
+                </div>
+                <i class="fa-solid fa-music music_icon"></i>
+                <i class="fa-solid fa-gear gear_icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- bootstrap  -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- font awsome -->
+    <script src="./js/all.min.js"></script>
+    <!-- js file -->
+    <script src="./js/app.js"></script>
+    <!-- animation  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+:root {
+  --main-color-blure: #2e4dc8;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 3rem;
+  height: 150vh;
+}
+.container {
+  padding: 100px;
+}
+.sound_component {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: fit-content;
+}
+.sound_state {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  color: var(--main-color-blure);
+}
+.control-sound {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  height: 235px;
+  width: 45px;
+  position: relative;
+  border-radius: 7px;
+}
+.input-container {
+  position: relative;
+  overflow-y: hidden;
+  height: 145px;
+  width: 45px;
+}
+.control-sound #range_sound {
+  transform: rotate(-90deg);
+  -webkit-appearance: none;
+  position: absolute;
+  left: -42px;
+  top: 80px;
+}
+
+/* thump */
+input[type="range"]::-webkit-slider-thumb {
+  /* circle */
+  -webkit-appearance: none;
+  background: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6.2px);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 100 !important;
+}
+
+/* track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: transparent;
+  border-radius: 7px;
+  height: 2px;
+  z-index: -2;
+}
+.control-sound #sound_size {
+  background-color: var(--main-color-blure);
+  width: 2.6px;
+  height: 120px;
+  position: absolute;
+  top: 145px;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%);
+  z-index: -1;
+  transition: 0.3s;
+}
+.input-container::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 122px;
+  background: #eee;
+  top: 23px;
+  left: 50%;
+  z-index: -2;
+}
+
+.control-sound .music_icon {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 1px solid #eee;
+  width: 38px;
+  padding-bottom: 13px;
+  color: var(--main-color-blure);
+}
+.control-sound .gear_icon {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
