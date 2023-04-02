@@ -20,11 +20,20 @@
 
 <body>
     <div class="container">
+        <div id="sound_value" class="box"></div>
         <div class="sound_component">
-            <div class="sound_state" id="sound_state">
-                <i class="fa-solid fa-volume-high state_icon_high" id="state_icon_high"></i>
-                <!-- <i class="fa-solid fa-volume-low state_icon_low" id="state_icon_low"></i> -->
-                <!-- <i class="fa-solid fa-volume-xmark state_icon_xmark" id="state_icon_xmark"></i> -->
+            <div class="box sound_state" id="sound_state">
+                <ul>
+                    <li class="state_icon" id="state_icon_high">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </li>
+                    <li class="state_icon" id="state_icon_low">
+                        <i class="fa-solid fa-volume-low"></i>
+                    </li>
+                    <li class="state_icon" id="state_icon_xmark">
+                        <i class="fa-solid fa-volume-xmark"></i>
+                    </li>
+                </ul>
             </div>
             <div class="control-sound">
                 <div class="input-container">

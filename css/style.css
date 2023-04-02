@@ -9,19 +9,11 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  margin-bottom: 3rem;
-  height: 150vh;
 }
-.container {
-  padding: 100px;
+ul {
+  list-style: none;
 }
-.sound_component {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: fit-content;
-}
-.sound_state {
+.box {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   width: 45px;
   height: 45px;
@@ -29,7 +21,42 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 7px;
+}
+.active {
+  display: block !important;
+}
+.container {
+  padding: 100px;
+}
+.sound_component {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: fit-content;
+  margin: auto;
+}
+#sound_value {
+  margin: 10px auto;
   color: var(--main-color-blure);
+  position: relative;
+}
+#sound_value::before {
+  content: "%";
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  font-size: 10px;
+  font-family: monospace;
+}
+.sound_state {
+  color: var(--main-color-blure);
+}
+.sound_state ul {
+  margin: auto;
+  padding: 0;
+}
+.sound_state .state_icon {
+  display: none;
 }
 .control-sound {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
@@ -54,7 +81,6 @@ body {
 
 /* thump */
 input[type="range"]::-webkit-slider-thumb {
-  /* circle */
   -webkit-appearance: none;
   background: #fff;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
@@ -73,6 +99,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   border-radius: 7px;
   height: 2px;
   z-index: -2;
+  cursor: pointer;
 }
 .control-sound #sound_size {
   background-color: var(--main-color-blure);
